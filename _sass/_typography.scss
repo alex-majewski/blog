@@ -1,0 +1,76 @@
+// @import url('https://fonts.googleapis.com/css2?family=Cousine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@200&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600&display=swap');
+
+$displayfont: 'Azeret Mono', monospace;
+$bodyfont: 'Inter Tight', sans-serif;
+
+body {
+  font-size: 18px;
+  color: $text-color;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: $bodyfont;
+  margin-top: 2em;
+  font-weight: 600;
+}
+h1, h2, h4 {
+  text-align: center;
+}
+h1 {
+  font-size: 2.4em;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+p {
+  font-family: $bodyfont;
+  line-height: 1.75em;
+}
+a {
+  font-family: $bodyfont;
+}
+.img-caption a, article a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+.img-caption {
+  font-size: 0.65em;
+  text-align:center;
+  margin-bottom: 32px;
+}
+.post-meta {
+  font-size: 0.7em;
+  text-align: center;
+  font-family: $bodyfont;
+}
+.post-list-title {
+  font-family: $bodyfont;
+  text-align: center;
+  margin-bottom: 2.5em;
+  font-size: 0.7em;
+}
+
+.post-content {
+  margin-top: 64px;
+}
+
+code {
+  background: #505050;
+  // background: linear-gradient(180deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.2) 100%);
+  // background: radial-gradient(circle, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.2) 100%);
+  padding: 0.05em 0.3em;
+  border-radius: 0.2em;
+  // color: $background-color;
+  // font-family: $displayfont;
+}
+
+footer {
+  font-size: 0.65em;
+}
+footer p {
+  padding: 24px 64px;
+}
