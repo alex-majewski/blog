@@ -25,21 +25,14 @@ layout: default
         {% endfor %}
       {%- endif -%}
       <br />
-      {%- if page.category -%}
-        category: {% for category in page.category %}
+      {%- if page.categories -%}
+        category: {% for category in page.categories %}
           <span>
             {{ category }}
           </span>
         {% endfor %}
       {%- endif -%}
       </p>
-      <!-- <p>category:
-      {%- if page.category -%}
-        {% for category in page.category %}
-          {{category}}
-        {% endfor %}
-      {%- endif -%}
-    </p> -->
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">

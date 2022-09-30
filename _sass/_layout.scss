@@ -22,14 +22,8 @@ article {
   top: 8px;
   left: 8px;
 }
-.thumbnail {
-  width: 280px;
-  height: 200px;
-  overflow:hidden;
-  border-radius: 8px;
-  // margin-right: 24px;
-}
 img {
+  background-color: $background-color;
   display:block;
   margin-top: 24px;
   margin-bottom: 6px;
@@ -57,22 +51,37 @@ img {
 }
 ul {
   list-style-type: none;
+  padding: 16px;
 }
-.post-list li {
+.post-list {
+  li {
   width: 100%;
-}
-.post-list li>* {
-  float: left;
-}
-.post-list h2 {
-  text-align: left;
-  margin:0;
+  }
+  li>* {
+    float: left;
+  }
+  h2 {
+    text-align: left;
+    margin:0;
+  }
 }
 .post-list-item-desc {
-  // margin-left: 24px;
   box-sizing: border-box;
   padding-left: 24px;
-  max-width: 456px;
+  padding-right: 16px;
+  width: 70%;
+  // max-width: 456px;
+}
+
+.thumbnail {
+  width: 280px;
+  height: 164px;
+  width: 30%;
+  // height: 100%;
+  overflow:hidden;
+  border-radius: 8px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 footer {

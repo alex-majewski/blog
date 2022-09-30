@@ -65,11 +65,11 @@ If we plan to deform the geometry after using Measure SOP, we will have to [chan
 ### 3. Curves method
 We can use curve direction as velocity. I think that’s what `Curve Force` and `Gas Curve Force` SOPs already do, but if you need it as a velocity field, this could be one way to do it.
 
-We pass the curve through a `Resample` SOP and export a Tangent attribute. And then transfer it to our velocity field.
+We pass the curve through a `Resample` SOP and export a Tangent attribute and then transfer it to our velocity field.
 
 ![Example of using the tangent as direction vector]({{ '/assets/posts/handcrafting_velocity_fields/velfields_curve.jpg' | relative_url }}){: .img-max-post-width}
 
-Alternatively, we can use `Orient Along Curve` which lets us control the rotation of @N with pitch, yaw and roll, which we then can use as @v.
+Alternatively, we can use `Orient Along Curve` which lets us control the rotation of @N with pitch, yaw and roll, which we then can use as @v. (`@v = @N;`)
 
 ### Transferring to velocity field
 
