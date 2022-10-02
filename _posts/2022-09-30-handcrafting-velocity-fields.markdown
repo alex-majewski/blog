@@ -5,13 +5,15 @@ date:   2022-09-30 14:26:32 +0200
 author: Alex Majewski
 categories: Houdini
 keywords: houdini velocity field
-thumbnail: /blog/assets/posts/handcrafting_velocity_fields/velfields_thumbnail.jpg
+thumbnail: /assets/posts/handcrafting_velocity_fields/velfields_thumbnail.jpg
 ---
 Velocity fields are used to control simulations, especially things like smoke. They can be created from any set of points by giving them a vector attribute.
 
 ![Examples of different fields]({{ '/assets/posts/handcrafting_velocity_fields/velfields_examples.jpg' | relative_url }}){: .img-extra-post-width}
 
 It's literally that simple. Or hard --- if you don't know a few easy techniques from this article which will teach you how to direct velocity vectors by hand.
+
+
 
 ## Creating a basic velocity field
 We can start by creating points. For simplicity, we'll use a simple `Points From Volume`.<br>
@@ -27,15 +29,20 @@ For more awareness, we can preview our velocity field a bit more clearly by feed
 
 ![Volume Trail SOP setup]({{ '/assets/posts/handcrafting_velocity_fields/velfields_volume_trail.jpg' | relative_url }}){:class="img-extra-post-width"}
 
-Finally, we send the result into a solver.
+Finally, we send the result into a solver. (Make sure to check out the hip file provided at the end of this post. It contains Pyro, Flip, Vellum and RBD both SOP and DOP level setups)
 
 ![Example of a velocity field plugged into Pyro solver]({{ '/assets/posts/handcrafting_velocity_fields/velfields_example_pyro.jpg' | relative_url }}){: .img-max-post-width}
 A simplified example of a velocity field being used in a Pyro DOP network (it still needs @fuel, @temperature etc).
 {: .img-caption}
 
 ![Example of a velocity field plugged into SOP-level Vellum Solver]({{ '/assets/posts/handcrafting_velocity_fields/velfields_example_vellum.jpg' | relative_url }}){: .img-max-post-width}
-A possible way of applying a velocity field inside a SOP-level Vellum Solver.
+A possible way of applying a velocity field as a POP force inside a SOP-level Vellum Solver.
 {: .img-caption}
+
+{% capture video_url %}
+  {{ "/assets/posts/handcrafting_velocity_fields/velfields_pyro.mp4" | relative_url }}
+{% endcapture %}
+{% include video.html url=video_url %}{: .img-extra-post-width}
 
 ## How to hand-craft velocity vectors
 
@@ -75,7 +82,16 @@ Alternatively, we can use `Orient Along Curve` which lets us control the rotatio
 
 After creating the general flow of vectors we need to transfer them to our field using the `Attribute Transfer` SOP.
 
-![Transferring velocity vectors to a field]({{ '/assets/posts/handcrafting_velocity_fields/velfields_distance_threshold.jpg' | relative_url }}){: .img-extra-post-width}
+![Example of transferring velocity attribute]({{ '/assets/posts/handcrafting_velocity_fields/velfields_attrib_transfer_nodes.jpg' | relative_url }}){: .img-max-post-width}
 
+{% capture video_url %}
+  {{ "/assets/posts/handcrafting_velocity_fields/velfields_attrib_transfer.mp4" | relative_url }}
+{% endcapture %}
+{% include video.html url=video_url %}{: .img-extra-post-width}
 
 As always, that's just the tip of the iceberg of possibilities. There are many more ways to create and adjust velocity vectors.
+
+{% capture hip_link %}
+  {{ "/assets/posts/handcrafting_velocity_fields/velocity_fields_examples_v_1_0.hipnc" | relative_url }}
+{% endcapture %}
+{% include hipfile.html url=hip_link version="1.0" houversion="19.5.303" %}

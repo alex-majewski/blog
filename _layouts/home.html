@@ -29,7 +29,7 @@ layout: default
       {%- for post in posts -%}
       <li>
         <!-- <img src="{{ post.thumbnail }}" /> -->
-        <div class="thumbnail" style="background-image: url('{{ post.thumbnail }}')"></div>
+        <div class="thumbnail" style="background-image: url('{{ post.thumbnail | relative_url }}')"></div>
         <div class="post-list-item-desc">
           <span class="post-meta">{{ post.date | date: date_format }}</span>
           <h2>

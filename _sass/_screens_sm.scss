@@ -9,4 +9,12 @@
     border-radius: 10px;
   }
 
+
+    .hip-container {
+      flex-direction: column;
+      .col-left {
+        padding-right: 0;
+      }
+    }
+
 }
