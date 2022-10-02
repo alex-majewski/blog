@@ -7,7 +7,7 @@ categories: Houdini
 keywords: houdini velocity field
 thumbnail: /assets/posts/handcrafting_velocity_fields/velfields_thumbnail.jpg
 ---
-Velocity fields are used to control simulations, especially things like smoke. They can be created from any set of points by giving them a vector attribute.
+Velocity fields are used to control simulations, especially things like smoke or fluids. They can be created from any set of points by giving them a vector attribute.
 
 ![Examples of different fields]({{ '/assets/posts/handcrafting_velocity_fields/velfields_examples.jpg' | relative_url }}){: .img-extra-post-width}
 
