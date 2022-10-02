@@ -44,7 +44,7 @@ A possible way of applying a velocity field as a POP force inside a SOP-level Ve
 {% endcapture %}
 {% include video.html url=video_url %}{: .img-extra-post-width}
 
-## How to hand-craft velocity vectors
+## How to handcraft velocity vectors
 
 ### 1. Plane deformation method
 This method relies on adding velocity in uniform direction to a plane while it's still flat, and then transforming and warping it afterwards.
