@@ -32,7 +32,7 @@ For more awareness, we can preview our velocity field a bit more clearly by feed
 Finally, we send the result into a solver. (Make sure to check out the hip file provided at the end of this post. It contains Pyro, Flip, Vellum and RBD both SOP and DOP level setups)
 
 ![Example of a velocity field plugged into Pyro solver]({{ '/assets/posts/handcrafting_velocity_fields/velfields_example_pyro.jpg' | relative_url }}){: .img-max-post-width}
-A simplified example of a velocity field being used in a Pyro DOP network (it still needs @fuel, @temperature etc).
+An example of a velocity field being used in a Pyro DOP network.
 {: .img-caption}
 
 ![Example of a velocity field plugged into SOP-level Vellum Solver]({{ '/assets/posts/handcrafting_velocity_fields/velfields_example_vellum.jpg' | relative_url }}){: .img-max-post-width}
