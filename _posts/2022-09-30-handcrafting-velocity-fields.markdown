@@ -50,7 +50,7 @@ A possible way of applying a velocity field as a POP force inside a SOP-level Ve
 This method relies on adding velocity in uniform direction to a plane while it's still flat, and then transforming and warping it afterwards.
 
 ![Twisting a flat plane with vectors]({{ '/assets/posts/handcrafting_velocity_fields/velfields_twist.jpg' | relative_url }}){: .img-extra-post-width}
-Most SOPs will be able to deform vector attributes as long as they are of the correct type. Default attributes such as @v usually work by default, but if you chose a different name, or they simply aren't being affected by transformations then you'll have to [set attribute type metadata](https://www.sidefx.com/docs/houdini/vex/attribtypeinfo_suite) to "vector" in a wrangle.
+Most SOPs will be able to deform vector attributes as long as they are of the correct type. Default attributes such as @v usually work by default, but if we chose a different name, or they simply aren't being affected by transformations then we'll have to [set attribute type metadata](https://www.sidefx.com/docs/houdini/vex/attribtypeinfo_suite) to "vector" in a wrangle.
 {: .img-caption}
 
 From here, we can do pretty much anything --- duplicate the distorted plane, copy it to points in a circle, deform it along a curve using `Path Deform` --- the possibilities are endless.
@@ -62,7 +62,7 @@ If we set the `Measure` SOP to "Gradient" mode it will generate direction vector
 
 ![Example of Measure SOP in use]({{ '/assets/posts/handcrafting_velocity_fields/velfields_measure_example.jpg' | relative_url }}){: .img-max-post-width}
 
-`Measure` generates these vectors in relation to the chosen axis, and they will flow around your geometry like smoke in a wind tunnel.
+`Measure` generates these vectors in relation to the chosen axis, and they will flow around our geometry like smoke in a wind tunnel.
 
 
 If we plan to deform the geometry after using Measure SOP, we will have to [change the velocity attribute's type metadata](https://www.sidefx.com/docs/houdini/vex/attribtypeinfo_suite) to "vector" in an `Attribute Wrangle`.
@@ -70,7 +70,7 @@ If we plan to deform the geometry after using Measure SOP, we will have to [chan
 ![Changing attribute type metadata]({{ '/assets/posts/handcrafting_velocity_fields/velfields_attribtypeinfo.jpg' | relative_url }}){: .img-max-post-width}
 
 ### 3. Curves method
-We can use curve direction as velocity. I think that’s what `Curve Force` and `Gas Curve Force` SOPs already do, but if you need it as a velocity field, this could be one way to do it.
+We can use curve direction as velocity. I think that’s what `Curve Force` and `Gas Curve Force` SOPs already do, but if we need it as a velocity field, this could be one way to do it.
 
 We pass the curve through a `Resample` SOP and export a Tangent attribute and then transfer it to our velocity field.
 
